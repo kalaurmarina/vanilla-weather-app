@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link href="src/style.css" rel="stylesheet"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/40b2e97f98.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-text-wrapper">
+        <form class="search-city" id="search-city">
+            <i class="fa-solid fa-compass location-icon"></i>
+            <input type="submit" class="location-button shadow-sm" id="current-loc" value="Current location">
+            <input type="text" id="search-input" placeholder="Enter a city" autofocus="on" autocomplete="off">
+            <input type="submit" class="search-button shadow-sm" id="search-engine" value="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        </form>
+    
+        <br/>
+        <div class="row m-0">
+            <div class="col sm-6 weather-days">
+                Monday
+                <br/>
+                <i class="fa-solid fa-sun"></i>
+                <br/>
+                23°/18°
+            </div>
+            <div class="col weather-days">
+                Tuesday
+                <br/>
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+                <br/>
+                26°/14°
+            </div>
+            <div class="col weather-days">
+                Wednesday
+                <br/>
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+                <br/>
+                20°/15°
+            </div>
+            <div class="col weather-days">
+                Thursday
+                <br/>
+                <i class="fa-solid fa-cloud-sun"></i>
+                <br/>
+                22°/15°
+            </div>
+            <div class="col weather-days">
+                Friday
+                <br/>
+                <i class="fa-solid fa-sun"></i>
+                <br/>
+                28°/20°
+            </div>
+            <div class="col weather-days">
+                Saturday
+                <br/>
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+                <br/>
+                24°/17°
+            </div>
+        </div>
+
+        <br/>
+        <div class="row m-0 about-weather">
+            <div class="col-4">
+        <h1 id="city">
+            KYIV
+        </h1>
+        <h2 id="day-and-time">
+            Sunday 12:10
+        </h2>
+            </div>
+            <div class="col-4">
+        <i class="fa-regular fa-sun weather-icon-main"></i>
+            </div>
+            <div class="col-4">
+        <p class="current-temperature">
+            <span class="degree-this-day" id="temperature">29</span>
+            <span class="units"> 
+                <a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link"> °F</a> 
+            </span>   
+             <br/>
+             <p id="weather-descr">Sunny</p>
+        </p>
+            </div>
+        </div>
+        
+        <br/>
+        <div class="row m-0 ">
+            <div class="col sm-6 weather-information">
+                Humidity:
+                <br/>
+                <i class="fa-solid fa-wind" ></i>
+                <br/>
+                <p id="humidity"> 32 % </p>
+            </div>
+            <div class="col weather-information">
+                Wind:
+                <br/>
+                <i class="fa-solid fa-wind"></i>
+                <br/>
+                <p id="wind">6.26 m/h</p>
+            </div>
+            <div class="col weather-information">
+                Pressure
+                <br/>
+                <i class="fa-solid fa-wind"></i>
+                <br/>
+                <p id="pressure">1000 hPa</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="src/script.js"></script>
+</body>
+</html>
