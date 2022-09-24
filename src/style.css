@@ -1,8 +1,17 @@
 body {
-    background-image: url(images/weather.jpg);
+    background-image: url(../images/clouds.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    flex-direction: row;
 }
 
 .container {
+    background: white;
+    border-color: rgb(48, 33, 0);
+    border-radius: 10px;
     margin-top: 3%;
     margin-bottom: 3%;
     align-items: center;
