@@ -65,26 +65,33 @@ function convertToCelsius(event) {
 
 
 //show City and Location 
-function showTemperature(event) {
-  let celsius = Math.round(event.data.main.temp);
+function showTemperature(response) {
+  let celsius = Math.round(response.data.main.temp);
   let fahrenheit = Math.round(celsius * 1.8 + 32);
   temperatureValue(celsius);
-  console.log(event.data);
+  console.log(response.data);
   
   let h1City = document.querySelector("#city");
-  h1City.innerHTML = event.data.name;
+  h1City.innerHTML = response.data.name;
 
   let weatherDescription = document.querySelector("#weather-descr");
-  weatherDescription.innerHTML = event.data.weather[0].description;
+  weatherDescription.innerHTML = response.data.weather[0].description;
 
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `${Math.round(event.data.main.humidity)} %`;
+  humidity.innerHTML = `${Math.round(responset.data.main.humidity)} %`;
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `${Math.round(event.data.wind.speed)} m/h`;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} m/h`;
 
   let pressure = document.querySelector("#pressure");
-  pressure.innerHTML = `${Math.round(event.data.main.pressure)} hPa`;
+  pressure.innerHTML = `${Math.round(response.data.main.pressure)} hPa`;
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src", 
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  icon.setAttribute("alt", )
 
   celsiusTemperature = event.data.main.temp;
 }
