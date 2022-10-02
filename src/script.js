@@ -31,7 +31,6 @@ function formatDate(date) {
 
 timeElement.innerHTML = formatDate(currentDate);
 
-
 //change City
 function search(event) {
   event.preventDefault();
@@ -47,17 +46,21 @@ searchForm.addEventListener("submit", search);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 
@@ -82,6 +85,8 @@ function showTemperature(event) {
 
   let pressure = document.querySelector("#pressure");
   pressure.innerHTML = `${Math.round(event.data.main.pressure)} hPa`;
+
+  celsiusTemperature = event.data.main.temp;
 }
 
 function temperatureValue(newTemperature) {
@@ -94,17 +99,13 @@ function unitValue(newUnitTemperature) {
   unit.innerHTML = newUnitTemperature``;
 }
 
-function changeUnitToFahrenheit() {
-  unitValue("℉");
-}
-let unitTemperatureC = document.querySelector("#fahrenheit-link");
-unitTemperatureC.addEventListener("click", changeUnitToFahrenheit);
+let celsiusTemperature = null;
 
-function changeUnitToCelsius() {
-  unitValue("℃");
-}
-let unitTemperatureF = document.querySelector("#celsius-link");
-unitTemperatureF.addEventListener("click", changeUnitToCelsius);
+let celsiusLink = document.querySelector("#fahrenheit-link");
+celsiusLink.addEventListener("click", convertToFahrenheit);
+
+let fahrenheitLink = document.querySelector("#celsius-link");
+fahrenheitLink .addEventListener("click", convertToCelsius);
 
 function showPosition(position) {
   let lat = position.coords.latitude;
