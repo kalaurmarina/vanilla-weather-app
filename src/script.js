@@ -78,7 +78,7 @@ function showTemperature(response) {
   weatherDescription.innerHTML = response.data.weather[0].description;
 
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `${Math.round(responset.data.main.humidity)} %`;
+  humidity.innerHTML = `${Math.round(response.data.main.humidity)} %`;
 
   let wind = document.querySelector("#wind");
   wind.innerHTML = `${Math.round(response.data.wind.speed)} m/h`;
@@ -91,9 +91,9 @@ function showTemperature(response) {
     "src", 
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-  icon.setAttribute("alt", )
+  icon.setAttribute("alt", response.data.weather[0].description);
 
-  celsiusTemperature = event.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
 }
 
 function temperatureValue(newTemperature) {
