@@ -81,7 +81,11 @@ body {
     
 }
 
-.weather-days {
+.weather-forecast {
+    text-align: center;
+}
+
+.weather-forecast-days {
     text-align: center;
     display: block;
     border: 2px;
@@ -90,6 +94,14 @@ body {
     border-radius: 10px;
     margin: 5px 3px auto;
     padding: 5px;
+}
+
+.weather-forecast-temperatures {
+    font-size: 15px;
+}
+
+.weather-forecast-temperatures-min {
+    opacity: 0.7;
 }
 
 .fa-solid {
