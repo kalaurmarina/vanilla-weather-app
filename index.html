@@ -29,93 +29,9 @@
         </form>
     
         <br/>
-        <div class="weather-forecast">
-        <div class="row m-0">
-            <div class="col sm-6 weather-forecast-days">
-                Monday
-                <br/>
-                <i class="fa-solid fa-sun"></i>
-                <br/>
-                <div class="weather-forecast-temperatures">
-                    <span class="weather-forecast-temperatures-max">
-                        23°
-                    </span>
-                    / <span class="weather-forecast-temperatures-min">
-                        18°
-                    </span>  
-                </div>   
-            </div>
-            <div class="col weather-forecast-days">
-                Tuesday
-                <br/>
-                <i class="fa-solid fa-cloud-sun-rain"></i>
-                <br/>
-                <div class="weather-forecast-temperatures">
-                    <span class="weather-forecast-temperatures-max">
-                        26°
-                    </span>
-                    / <span class="weather-forecast-temperatures-min">
-                        14°
-                    </span>  
-                </div>  
-            </div>
-            <div class="col weather-forecast-days">
-                Wednesday
-                <br/>
-                <i class="fa-solid fa-cloud-showers-heavy"></i>
-                <br/>
-                <div class="weather-forecast-temperatures">
-                    <span class="weather-forecast-temperatures-max">
-                        20°
-                    </span>
-                    / <span class="weather-forecast-temperatures-min">
-                        15°
-                    </span>  
-                </div> 
-            </div>
-            <div class="col weather-forecast-days">
-                Thursday
-                <br/>
-                <i class="fa-solid fa-cloud-sun"></i>
-                <br/>
-                <div class="weather-forecast-temperatures">
-                    <span class="weather-forecast-temperatures-max">
-                        22°
-                    </span>
-                    / <span class="weather-forecast-temperatures-min">
-                        16°
-                    </span>  
-                </div> 
-            </div>
-            <div class="col weather-forecast-days">
-                Friday
-                <br/>
-                <i class="fa-solid fa-sun"></i>
-                <br/>
-                <div class="weather-forecast-temperatures">
-                    <span class="weather-forecast-temperatures-max">
-                        28°
-                    </span>
-                    / <span class="weather-forecast-temperatures-min">
-                        20°
-                    </span>  
-                </div> 
-            </div>
-            <div class="col weather-forecast-days">
-                Saturday
-                <br/>
-                <i class="fa-solid fa-cloud-sun-rain"></i>
-                <br/>
-                <div class="weather-forecast-temperatures">
-                    <span class="weather-forecast-temperatures-max">
-                        24°
-                    </span>
-                    / <span class="weather-forecast-temperatures-min">
-                        17°
-                    </span>  
-                </div> 
-            </div>
-        </div>
+        <div class="weather-forecast"
+        id="forecast">
+       
         </div>
 
         <br/>
@@ -156,21 +72,36 @@
             <div class="col sm-6 weather-information">
                 Humidity:
                 <br/>
-                <i class="fa-solid fa-wind" ></i>
+                <img 
+                    src="images/icons/icons-wet.png" 
+                    width="20px" 
+                    height="20px"
+                    alt="Clear"
+                    id="icon">
                 <br/>
                 <p id="humidity"> 32 % </p>
             </div>
             <div class="col weather-information">
                 Wind:
                 <br/>
-                <i class="fa-solid fa-wind"></i>
+                <img 
+                    src="images/icons/icons-wind.png" 
+                    width="20px" 
+                    height="20px"
+                    alt="Clear"
+                    id="icon">
                 <br/>
                 <p id="wind">6.26 m/h</p>
             </div>
             <div class="col weather-information">
                 Pressure
                 <br/>
-                <i class="fa-solid fa-wind"></i>
+                <img 
+                    src="images/icons/icons-pressure.png" 
+                    width="20px" 
+                    height="20px"
+                    alt="Clear"
+                    id="icon">
                 <br/>
                 <p id="pressure">1000 hPa</p>
             </div>
