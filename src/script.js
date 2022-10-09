@@ -30,6 +30,7 @@ function formatDate(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   
   let days = [
@@ -195,8 +196,6 @@ function searchCity(event) {
     alert("Please enter a city");
   }
 }
-
-displayForecast();
 
 let searchFormCity = document.querySelector("#search-city");
 searchFormCity.addEventListener("submit", searchCity);
